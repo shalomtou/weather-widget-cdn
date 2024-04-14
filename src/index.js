@@ -4,8 +4,8 @@ import { WeatherWidget } from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export class AppRenderer {
-  constructor(apiKey, divId) {
-    this.apiKey = apiKey;
+  constructor(divId) {
+    this.apiKey = "5cbf0a4aca94419eb5a120540241004";
     this.divId = divId;
   }
 
