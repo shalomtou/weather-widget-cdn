@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.css",
-    "main.js": "/static/js/main.js",
+    "main.css": "/static/css/weather-widget.css",
+    "main.js": "/static/js/weather-widget.js",
     "index.html": "/index.html",
-    "main.css.map": "/static/css/main.css.map",
-    "main.js.map": "/static/js/main.js.map"
+    "weather-widget.css.map": "/static/css/weather-widget.css.map",
+    "weather-widget.js.map": "/static/js/weather-widget.js.map"
   },
   "entrypoints": [
-    "static/css/main.css",
-    "static/js/main.js"
+    "static/css/weather-widget.css",
+    "static/js/weather-widget.js"
   ]
 }
