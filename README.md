@@ -36,25 +36,25 @@ HTML file Example:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/css/main.d5289b2f.css"
+      href="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/css/main.css"
       rel="stylesheet"
     />
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/js/main.js"
+    ></script>
     <title>Weather Widget</title>
   </head>
   <body>
     <div id="weatherDiv"></div>
-
-    <script
-      crossorigin
-      src="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/js/main.c3a408dd.js"
-    ></script>
     <script>
-      // Initialize Weather Widget instance
-      const weatherDiv = new WeatherWidgetInstance(
-        "YOUR_API_KEY",
-        "weatherDiv"
-      );
-      weatherDiv.render();
+      document.addEventListener("DOMContentLoaded", function () {
+        const weatherDiv = new AppRenderer(
+          "5cbf0a4aca94419eb5a120540241004",
+          "elementor-heading-title elementor-size-default"
+        );
+        weatherDiv.render();
+      });
     </script>
   </body>
 </html>
