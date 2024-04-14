@@ -50,7 +50,6 @@ HTML file Example:
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const weatherDiv = new AppRenderer(
-          "5cbf0a4aca94419eb5a120540241004",
           "elementor-heading-title elementor-size-default"
         );
         weatherDiv.render();
@@ -60,14 +59,13 @@ HTML file Example:
 </html>
 ```
 
-Replace `YOUR_API_KEY` with your [Weather API](https://www.weatherapi.com/) API key and `weatherDiv` default will append in the body element, with the
+Replace `weatherDiv` default will append in the body element, with the
 id of the HTML element where you want the Weather Widget to be rendered.
 
 ### Initializing an Instance
 
-Create a Api Token at [Weather API](https://www.weatherapi.com/).
 To initialize an instance of the Weather Widget,create
-a new `WeatherWidgetInstance` object with your [Weather API](https://www.weatherapi.com/) key and the id of
+a new `WeatherWidgetInstance` object with the id of
 the HTML element where you want the widget to be rendered.
 
 ```js
@@ -76,7 +74,6 @@ const weatherWidget = new WeatherWidgetInstance("YOUR_API_KEY", "divId");
 
 ### Parameters
 
-`apiKey`: Your OpenWeather API key.
 `divId`: The id of the HTML element where you
 want the Weather Widget to be rendered.
 
@@ -95,7 +92,7 @@ After initializing an instance of the Weather
 Widget, call the `render()` method to display the widget on your website.
 
 ```js
-const weatherDiv = new WeatherWidgetInstance("YOUR_API_KEY", "weatherDiv");
+const weatherDiv = new WeatherWidgetInstance( "weatherDiv");
 weatherDiv.render();
 ```
 
