@@ -21,8 +21,9 @@ Script to initialize the Widget:
 
 ```js
 <script>
-  // Initialize Weather Widget instance const weatherDiv = new
-  WeatherWidgetInstance( "YOUR_API_KEY", "weatherDiv" ); weatherDiv.render();
+  // Initialize Weather Widget instance 
+  const weatherDiv = new WeatherWidgetInstance( "YOUR_API_KEY", "weatherDiv" );
+  weatherDiv.render();
 </script>
 ```
 
@@ -59,13 +60,14 @@ HTML file Example:
 </html>
 ```
 
-Replace `YOUR_API_KEY` with your OpenWeather API key and `weatherDiv` default will append in the body element, with the
+Replace `YOUR_API_KEY` with your [Weather API](https://www.weatherapi.com/) API key and `weatherDiv` default will append in the body element, with the
 id of the HTML element where you want the Weather Widget to be rendered.
 
 ### Initializing an Instance
 
-To initialize an instance of the Weather Widget, create
-a new `WeatherWidgetInstance` object with your OpenWeather API key and the id of
+Create a Api Token at [Weather API](https://www.weatherapi.com/).
+To initialize an instance of the Weather Widget,create
+a new `WeatherWidgetInstance` object with your [Weather API](https://www.weatherapi.com/) key and the id of
 the HTML element where you want the widget to be rendered.
 
 ```js
