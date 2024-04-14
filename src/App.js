@@ -149,26 +149,7 @@ export const WeatherWidget = ({ apiKey }) => {
                 alignItems: "center",
               }}
             >
-              <div>
-                <Card.Text style={{ fontSize: "1.3rem" }} className='mb-1'>
-                  {locationObjcet.name}
-                </Card.Text>
-                <Card.Text className='mb-1'>{locationObjcet.region}</Card.Text>
-                <Card.Text className='mb-1'>{locationObjcet.country}</Card.Text>
-              </div>
-              <div className='d-flex align-items-center'>
-                <Card.Text className='mb-1'>
-                  {daysOfWeek[locationObjcet.is_day]}
-                </Card.Text>
-                <Card.Text className='mb-1'>
-                  {locationObjcet.temp_c.toFixed(1)}°C
-                </Card.Text>
-                <img
-                  src={locationObjcet.condition.icon}
-                  alt={locationObjcet.condition.text}
-                  style={{ width: "30px", height: "30px", marginLeft: "10px" }}
-                />
-              </div>
+              <CardWeather weather={locationObjcet} index={1} />
             </div>
           )}
         </Card.Body>
@@ -190,28 +171,27 @@ export const WeatherWidget = ({ apiKey }) => {
       )}
       <div className='d-flex flex-column mt-4'>
         {weatherData.map((weather, index) => (
-          <Card className='shadow-lg mb-3' style={{ fontSize: "1rem" }}>
-            <Card.Body className='d-flex justify-content-between align-items-center'>
-              <div>
-                <Card.Text className='fw-bold mb-1'>{weather.date}</Card.Text>
-                <Card.Text>{weather.temperature.toFixed(1)}°C</Card.Text>
-              </div>
-              <div className='d-flex align-items-center'>
-                <span className='text-muted text-bold me-2'>
-                  {weather.dayOfWeek}
-                </span>
-                <span className='text-muted me-2'>
-                  {weather.condition.text}
-                </span>
-                <img
-                  src={weather.condition.icon}
-                  alt={weather.condition.text}
-                />
-              </div>
-            </Card.Body>
-          </Card>
+          <CardWeather weather={weather} index={index} />
         ))}
       </div>
     </Container>
+  );
+};
+
+const CardWeather = ({ weather, index }) => {
+  return (
+    <Card key={index} className='shadow-lg mb-3' style={{ fontSize: "1rem" }}>
+      <Card.Body className='d-flex justify-content-between align-items-center'>
+        <div>
+          <Card.Text className='fw-bold mb-1'>{weather.date}</Card.Text>
+          <Card.Text>{weather.temperature.toFixed(1)}°C</Card.Text>
+        </div>
+        <div className='d-flex align-items-center'>
+          <span className='text-muted text-bold me-2'>{weather.dayOfWeek}</span>
+          <span className='text-muted me-2'>{weather.condition.text}</span>
+          <img src={weather.condition.icon} alt={weather.condition.text} />
+        </div>
+      </Card.Body>
+    </Card>
   );
 };
