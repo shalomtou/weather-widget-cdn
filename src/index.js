@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { WeatherWidget } from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
+const { REACT_APP_WEATEHR_KEY } = process.env;
 
 export class AppRenderer {
   constructor(divId) {
-    this.apiKey = "5cbf0a4aca94419eb5a120540241004";
+    this.apiKey = REACT_APP_WEATEHR_KEY;
     this.divId = divId;
   }
 
