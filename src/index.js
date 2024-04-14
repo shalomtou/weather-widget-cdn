@@ -11,6 +11,8 @@ export class AppRenderer {
   }
 
   render() {
+    console.log(this);
+
     let container = document.getElementById(this.divId);
 
     if (!container) {
