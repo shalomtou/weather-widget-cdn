@@ -141,16 +141,20 @@ export const WeatherWidget = ({ apiKey }) => {
             </Button>
           </Form>
           {locationObjcet && (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                fontSize: "1rem",
-                alignItems: "center",
+            <CardWeather
+              location={{
+                name: locationObjcet.name,
+                region: locationObjcet.region,
+                country: locationObjcet.country,
               }}
-            >
-              <CardWeather weather={locationObjcet} index={1} />
-            </div>
+              weather={{
+                ...locationObjcet,
+                date: locationObjcet.localtime,
+                temperature: locationObjcet.temp_c,
+                dayOfWeek: daysOfWeek[locationObjcet.is_day],
+              }}
+              index={1}
+            />
           )}
         </Card.Body>
       </Card>
@@ -178,10 +182,19 @@ export const WeatherWidget = ({ apiKey }) => {
   );
 };
 
-const CardWeather = ({ weather, index }) => {
+const CardWeather = ({ weather, index, location = null }) => {
   return (
     <Card key={index} className='shadow-lg mb-3' style={{ fontSize: "1rem" }}>
       <Card.Body className='d-flex justify-content-between align-items-center'>
+        {location ? (
+          <div>
+            <Card.Text style={{ fontSize: "1.3rem" }} className='mb-1'>
+              {location.name}
+            </Card.Text>
+            <Card.Text className='mb-1'>{location.region}</Card.Text>
+            <Card.Text className='mb-1'>{location.country}</Card.Text>
+          </div>
+        ) : null}
         <div>
           <Card.Text className='fw-bold mb-1'>{weather.date}</Card.Text>
           <Card.Text>{weather.temperature.toFixed(1)}°C</Card.Text>
