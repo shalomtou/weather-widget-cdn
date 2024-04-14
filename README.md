@@ -7,6 +7,28 @@ The Weather Widget is a customizable React component that allows you to display 
 To use the Weather Widget via CDN, include the following script tags in your HTML file:
 
 ```html
+<link
+  href="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/css/main.d5289b2f.css"
+  rel="stylesheet"
+/>
+<script
+  crossorigin
+  src="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/js/main.c3a408dd.js"
+></script>
+```
+
+Script to initialize the Widget:
+
+```js
+<script>
+  // Initialize Weather Widget instance const weatherDiv = new
+  WeatherWidgetInstance( "YOUR_API_KEY", "weatherDiv" ); weatherDiv.render();
+</script>
+```
+
+HTML file Example:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
