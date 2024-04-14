@@ -19,6 +19,8 @@ export class AppRenderer {
       let newContainer;
       newContainer = document.createElement("div");
       newContainer.id = "weatherDiv";
+      newContainer.style.position = "relative";
+      newContainer.style.zIndex = "999";
       document.body.append(newContainer);
       container = newContainer;
     }
