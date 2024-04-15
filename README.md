@@ -4,7 +4,7 @@ The Weather Widget is a customizable React component that allows you to display 
 
 ### Installation
 
-To use the Weather Widget via CDN, include the following script tags in your HTML file:
+To use the Weather Widget via CDN, include the following script tags in your HTML header:
 
 ```html
 <link
@@ -18,7 +18,7 @@ To use the Weather Widget via CDN, include the following script tags in your HTM
 ></script>
 ```
 
-Script to initialize the Widget:
+Script to initialize the Widget add it to the body:
 
 ```js
  <script>
