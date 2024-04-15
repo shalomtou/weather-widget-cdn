@@ -141,20 +141,21 @@ export const WeatherWidget = ({ apiKey }) => {
             </Button>
           </Form>
           {locationObjcet && (
-            <CardWeather
-              location={{
-                name: locationObjcet.name,
-                region: locationObjcet.region,
-                country: locationObjcet.country,
-              }}
-              weather={{
-                ...locationObjcet,
-                date: locationObjcet.localtime,
-                temperature: locationObjcet.temp_c,
-                dayOfWeek: daysOfWeek[locationObjcet.is_day],
-              }}
-              index={1}
-            />
+           
+              <CardWeather
+                location={{
+                  name: locationObjcet.name,
+                  region: locationObjcet.region,
+                  country: locationObjcet.country,
+                }}
+                weather={{
+                  ...locationObjcet,
+                  date: locationObjcet.localtime,
+                  temperature: locationObjcet.temp_c,
+                  dayOfWeek: daysOfWeek[locationObjcet.is_day],
+                }}
+                index={1}
+              />
           )}
         </Card.Body>
       </Card>

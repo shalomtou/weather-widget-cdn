@@ -13,6 +13,7 @@ To use the Weather Widget via CDN, include the following script tags in your HTM
 />
 <script
   crossorigin
+  defer
   src="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/js/main.c3a408dd.js"
 ></script>
 ```
@@ -20,11 +21,14 @@ To use the Weather Widget via CDN, include the following script tags in your HTM
 Script to initialize the Widget:
 
 ```js
-<script>
-  // Initialize Weather Widget instance 
-  const weatherDiv = new WeatherWidgetInstance( "YOUR_API_KEY", "weatherDiv" );
-  weatherDiv.render();
-</script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const weatherDiv = new AppRenderer(
+        "elementor-heading-title elementor-size-default"
+      );
+      weatherDiv.render();
+    });
+  </script>
 ```
 
 HTML file Example:
@@ -69,7 +73,7 @@ a new `WeatherWidgetInstance` object with the id of
 the HTML element where you want the widget to be rendered.
 
 ```js
-const weatherWidget = new WeatherWidgetInstance("YOUR_API_KEY", "divId");
+const weatherWidget = new WeatherWidgetInstance( "divId");
 ```
 
 ### Parameters
