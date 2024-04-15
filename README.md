@@ -8,13 +8,13 @@ To use the Weather Widget via CDN, include the following script tags in your HTM
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/css/main.d5289b2f.css"
+  href="https://cdn.jsdelivr.net/gh/shalomtou/weather-widget-cdn@main/build/static/css/weather-widget.css"
   rel="stylesheet"
 />
 <script
   crossorigin
   defer
-  src="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/js/main.c3a408dd.js"
+  src="https://cdn.jsdelivr.net/gh/shalomtou/weather-widget-cdn@main/build/static/js/weather-widget.js"
 ></script>
 ```
 
@@ -40,12 +40,13 @@ HTML file Example:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/css/main.css"
-      rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/shalomtou/weather-widget-cdn@main/build/static/css/weather-widget.css"
+    rel="stylesheet"
     />
     <script
       crossorigin
-      src="https://cdn.jsdelivr.net/gh/your-username/weather-widget-cdn@main/build/static/js/main.js"
+      defer
+      src="https://cdn.jsdelivr.net/gh/shalomtou/weather-widget-cdn@main/build/static/js/weather-widget.js"
     ></script>
     <title>Weather Widget</title>
   </head>
